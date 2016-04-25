@@ -34,10 +34,9 @@ body {
 }
 .navbar-close {
   width: 35px;
-  height: 35px;
   position: relative;
   display: block;
-  margin: 38px 0px 0px 27px;
+  margin: 38px 28px 38px 28px;
 }
 .look_line_close {
   background: white;
@@ -62,11 +61,11 @@ body {
 .nav_list {
   list-style: none;
   line-height: 80px;
-  font-size: 25px;
-  width: 100%;
+  font-size: 24px;
   float: left;
   color: #F3F3F3;
   display: block;
+  margin-top: 70px;
 }
 .arrowDown {
   width: 100px;
