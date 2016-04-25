@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    font-family: Helvetica,Arial,sans-serif;
+}
+.mainOne {
+  background-image: url('../images/bg.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 670px;
+  text-align: center;
+}
+.nav {
+  width: 20%;
+  min-width: 270px;
+  height: 100%;
+  background-color: #333333;
+  position: fixed;
+  float: left;
+}
+.navbar-toggler {
+  width: 35px;
+  height: 25px;
+  float: left;
+  margin: 2% 2%;
+}
+.look_line_nav {
+  height: 3px;
+  width: 100%;
+  background: #F3F3F3;
+  float: left;
+  margin-bottom: 8px;
+}
+.navbar-close {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  display: block;
+  margin: 38px 0px 0px 27px;
+}
+.look_line_close {
+  background: white;
+  width: 100%;
+  height: 3px;
+  position: absolute;
+}
+.line_close_one {
+  moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.line_close_two {
+  moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.nav_list {
+  list-style: none;
+  line-height: 80px;
+  font-size: 25px;
+  width: 100%;
+  float: left;
+  color: #F3F3F3;
+  display: block;
+}
+.arrowDown {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 90%;
+  left: 37%;
+  float: left;
+}
+.look_line {
+  background: white;
+  width: 40%;
+  height: 3px;
+  position: absolute;
+}
+.look_right {
+  moz-transform: rotate(140deg);
+  -ms-transform: rotate(140deg);
+  -o-transform: rotate(140deg);
+  -webkit-transform: rotate(140deg);
+  transform: rotate(140deg);
+  margin-left: 29%
+}
+.look_left {
+  moz-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  -o-transform: rotate(40deg);
+  -webkit-transform: rotate(40deg);
+  transform: rotate(40deg);
+}
+.blue {
+  height: 670px;
+  width: 100%;
+  background: #479683;
+}
