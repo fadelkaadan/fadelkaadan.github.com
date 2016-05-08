@@ -215,9 +215,9 @@ footer a {
 
 /*story*/
 .story {
-  background: #479683;
+  background: #25758A;
   width: 100%;
-  height: 1200px;
+  height: 1000px;
   text-align: center;
   position: relative;
   float: left;
@@ -229,7 +229,7 @@ footer a {
   display: block;
   float: left;
   text-align: center;
-  border-bottom: 1px solid #453847;
+  border-bottom: 0.5px solid #453847;
 }
 .born {
   margin-top: 50px;
