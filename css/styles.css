@@ -169,6 +169,7 @@ body {
   float: left;
   text-align: center;
 }
+
 .mainStory a {
   margin: 110px 0 0 0;
   font-size: 60px;
@@ -212,6 +213,12 @@ footer a {
   line-height: 3;
   z-index: 9;
 }
+.bot {
+width: 100%;
+height: 300px;
+float: left;
+text-align: center;
+}
 
 /*story*/
 .story {
@@ -229,6 +236,16 @@ footer a {
   float: left;
   text-align: center;
   border-bottom: 0.5px solid #453847;
+}
+.year a {
+    color: #FF6E6E;
+    text-decoration: none;
+}
+.year a:hover {
+    text-decoration: underline;
+}
+.year p {
+    padding: 0px 5%;
 }
 .born {
   margin-top: 50px;

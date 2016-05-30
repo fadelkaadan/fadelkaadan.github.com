@@ -3,11 +3,13 @@ $(window).ready(function() {
       $('.nav').animate({
       left: "-420"
       });
+      $('.overlay').css({'display':'fixed'});
     });
     $('.navbar-toggler').click(function(){
       $('.nav').animate({
       left: "0"
       });
+      $('.overlay').css({'display':'none'});
     });
 
     //arrowDown
@@ -56,26 +58,6 @@ $(window).ready(function() {
     $('.picOne').animate({"margin":"75px 0 0 30%", "z-index":"2"});
 });
 
-$(window).scroll(function(){
-  if ( $('body').scrollTop() > ($('.baby').position().top ) ) {
-   $('.baby').animate({"font-size":"1.3em"},1000);
-  }
-  if ( $('body').scrollTop() > ($('.school').position().top - 80) ) {
-   $('.school').animate({"font-size":"1.3em"},1000);
-  }
-  if ( $('body').scrollTop() > ($('.uni').position().top - 80) ) {
-   $('.uni').animate({"font-size":"1.3em"},1000);
-  }
-  if ( $('body').scrollTop() > ($('.germany').position().top - 80) ) {
-   $('.germany').animate({"font-size":"1.3em"},1000);
-  }
-  if ( $('body').scrollTop() > ($('.german').position().top - 80) ) {
-   $('.german').animate({"font-size":"1.3em"},1000);
-  }
-  if ( $('body').scrollTop() > ($('.programming').position().top - 250) ) {
-   $('.programming').animate({"font-size":"1.3em"},1000);
-  }
-});
 
 //scrollping classes
 
