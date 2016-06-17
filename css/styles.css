@@ -76,7 +76,7 @@ body {
   height: 24px;
   margin: 0 10px -4px 0;
 }
-.mainOne {
+.main {
   width: 100%;
   height: 670px;
   background-image: url('../images/bg.jpeg');
@@ -182,13 +182,17 @@ body {
   height: 5px;
   margin: -40px auto;
 }
-.pointers span {
+.pointers a {
   width: 7px;
   height: 7px;
   background: #B7D4F3;
   display: inline-block;
   margin: 0px 10px 0 10px;
   border-radius: 5px;
+}
+#selected {
+  border: 1px solid #fff;
+  background: #b7d4f3;
 }
 .business {
   width: 50%;
@@ -217,14 +221,10 @@ body {
   color: #ffffff;
   text-decoration: none;
 }
-#selected {
-  border: 1px solid #fff;
-  background: #b7d4f3;
-}
 footer {
   height: 200px;
   width: 100%;
-  background-color: rgba(255, 0, 0, 0.60);
+  background-color: rgb(247, 91, 91);
   text-align: center;
   float: left;
 }
