@@ -170,10 +170,9 @@ body {
   text-align: center;
 }
 
-.mainStory a {
-  margin: 110px 0 0 0;
-  font-size: 60px;
-  line-height: 4.9;
+.mainStory .storyTitle {
+  font-size: 50px;
+  line-height: 2.3;
   color: #ffffff;
   text-decoration: none;
 }
@@ -190,10 +189,68 @@ body {
   margin: 0px 10px 0 10px;
   border-radius: 5px;
 }
+.pointers a:hover {
+  background: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
 #selected {
   border: 1px solid #fff;
   background: #b7d4f3;
 }
+.slideStory {
+  height: 300px;
+  width: 10%;
+  background-color: rgb(166, 166, 166);
+  opacity: 0.2;
+}
+.toLeft {
+  float: left;
+}
+.toRight {
+  float: right;
+}
+.slideArrow {
+  background-color: rgb(255, 0, 0);
+    opacity: 0.5;
+    height: 25px;
+    width: 2px;
+    top: 45%;
+    position: relative;
+    display: inline-block;
+}
+.topLeft {
+  moz-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  -o-transform: rotate(40deg);
+  -webkit-transform: rotate(40deg);
+  transform: rotate(40deg);
+  margin: 0px -7px 20px 0px;
+}
+.downLeft {
+  moz-transform: rotate(150deg);
+  -ms-transform: rotate(150deg);
+  -o-transform: rotate(150deg);
+  -webkit-transform: rotate(150deg);
+  transform: rotate(150deg);
+
+}
+.topRight {
+  moz-transform: rotate(150deg);
+  -ms-transform: rotate(150deg);
+  -o-transform: rotate(150deg);
+  -webkit-transform: rotate(150deg);
+  transform: rotate(150deg);
+  margin: 0px -7px 20px 0px;
+}
+.downRight {
+  moz-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  -o-transform: rotate(40deg);
+  -webkit-transform: rotate(40deg);
+  transform: rotate(40deg);
+}
+
 .business {
   width: 50%;
   height: 300px;
@@ -203,9 +260,9 @@ body {
 }
 .business h2 {
   color: #FAFFF7;
-  font-size: 55px;
+  font-size: 50px;
   width: 100px;
-  margin-left: 30px;
+  margin-left: 10%;
 }
 .blog {
   width: 50%;
@@ -216,8 +273,8 @@ body {
 }
 .blog a {
   margin: 110px 0 0 0;
-  font-size: 60px;
-  line-height: 1.9;
+  font-size: 50px;
+  line-height: 2.3;
   color: #ffffff;
   text-decoration: none;
 }
@@ -346,9 +403,4 @@ footer a {
   .nav_list li {
     line-height: 60px;
   }
-}
-
-
-.testOne {
-  background-color: #b5ff00;
 }
