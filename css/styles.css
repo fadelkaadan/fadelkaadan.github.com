@@ -1,12 +1,13 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Handlee', cursive;
+    font-family: Arial;
+    font-weight: 100;
 }
 .nav {
   width: 20%;
   min-width: 270px;
-  height: 1500px;
+  height: 100vh;
   background-color: #333333;
   position: fixed;
   float: left;
@@ -58,7 +59,6 @@ body {
 }
 .nav_list {
   list-style: none;
-  line-height: 0;
   line-height: 80px;
   font-size: 24px;
   float: left;
@@ -74,11 +74,11 @@ body {
 .nav_list img {
   width: 25px;
   height: 25px;
-  margin: 0 10px -4px 0;
+  margin: 0 15px -3px 5px;
 }
 .main {
   width: 100%;
-  height: 670px;
+  height: 100vh;
   background-image: url('../images/bg.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -179,44 +179,48 @@ body {
 .pointers {
   width: 100%;
   height: 5px;
-  margin: -40px auto;
+  margin: -55px auto;
 }
 .pointers a {
   width: 7px;
   height: 7px;
-  background: #B7D4F3;
+  background: #c3c3c3;
   display: inline-block;
   margin: 0px 10px 0 10px;
   border-radius: 5px;
 }
 .pointers a:hover {
-  background: #fff;
-  border: 1px solid #fff;
+  background: #ffffff;
+  border: 1px solid #ffffff;
   cursor: pointer;
 }
-#selected {
-  border: 1px solid #fff;
-  background: #b7d4f3;
-}
 .slideStory {
-  height: 300px;
-  width: 10%;
-  background-color: rgb(166, 166, 166);
-  opacity: 0.2;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #393939;
+  top: 120px;
+  position: relative;
+  opacity: 0.3;
 }
+a.slideStory:hover {
+    opacity: 0.6;
+}
+
 .toLeft {
   float: left;
+  left: 5%;
 }
 .toRight {
   float: right;
+  left: -5%;
 }
 .slideArrow {
-  background-color: rgb(255, 0, 0);
-  opacity: 0.5;
+  background-color: rgb(255, 255, 255);
   height: 25px;
   width: 2px;
-  top: 45%;
-  position: relative;
+  top: 28px;
+  position: absolute;
   display: inline-block;
 }
 .topLeft {
@@ -225,7 +229,8 @@ body {
   -o-transform: rotate(40deg);
   -webkit-transform: rotate(40deg);
   transform: rotate(40deg);
-  margin: 0px -7px 20px 0px;
+  top: 8px;
+  left: 27px;
 }
 .downLeft {
   moz-transform: rotate(150deg);
@@ -233,6 +238,7 @@ body {
   -o-transform: rotate(150deg);
   -webkit-transform: rotate(150deg);
   transform: rotate(150deg);
+  left: 25px;
 
 }
 .topRight {
@@ -241,7 +247,8 @@ body {
   -o-transform: rotate(150deg);
   -webkit-transform: rotate(150deg);
   transform: rotate(150deg);
-  margin: 0px -7px 20px 0px;
+  top: 8px;
+  left: 32px;
 }
 .downRight {
   moz-transform: rotate(40deg);
@@ -250,24 +257,23 @@ body {
   -webkit-transform: rotate(40deg);
   transform: rotate(40deg);
 }
-
 .projects {
   width: 50%;
   height: 300px;
-  background: #5BBB5B;
-  float: left;
+  background: #393939;
+  float: right;
   text-align: center;
 }
 .projects a {
   color: #FAFFF7;
-  font-size: 50 px;
-  line-height: 2.3;
+  font-size: 40px;
+  line-height: 3.3;
   text-decoration: none;
 }
 .blog {
   width: 50%;
   height: 300px;
-  background: #393939;
+  background: #25758a;
   float: left;
   text-align: center;
 }
@@ -385,6 +391,9 @@ footer a {
   .pics {
     margin: 0 0;
   }
+  .slideStory {
+    display: none;
+  }
 }
 @media only screen and (max-width: 375px) {
   footer a {
@@ -397,7 +406,7 @@ footer a {
 }
 @media only screen and (max-height: 375px) {
   .nav_list {
-    margin-top: 25px;
+    margin-top: 30px;
   }
   .nav_list li {
     line-height: 60px;

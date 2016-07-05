@@ -19,10 +19,7 @@ $(window).ready(function() {
       });
     });
 
-    //age
-    var today = new Date();
-    var year = today.getFullYear();
-    var age = year - 1995;
+    //slideStory
 
     //shuffle
     $('.picThr').click(function(){
@@ -58,16 +55,10 @@ $(window).ready(function() {
     $('.picOne').animate({"margin":"75px 0 0 30%", "z-index":"2"});
 });
 
+/*if ( $('body').scrollTop() > $('.mainOne').position().top ) {
+    $('.const').toggleClass('testOne');
+}*/
 
-//scrollping classes
-
-
-//if ( $('body').scrollTop() > $('.mainOne').position().top ) {
-//    $('.const').toggleClass('testOne');
-//}
-
-  //welcome
-  //$('.welcome').animate({"left":"20%"},"slow").fadeIn('slow').fadeOut('slow');
 
   //under construction
   $('.const').delay(1500).fadeOut();
