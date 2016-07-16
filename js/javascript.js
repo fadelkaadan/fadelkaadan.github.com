@@ -21,6 +21,14 @@ $(window).ready(function() {
 
     //slideStory
 
+    //jump
+    $('.picAll').mouseenter(function() {
+      $(this).animate({"top":"-5px"}, 150);
+    });
+    $('.picAll').mouseleave(function() {
+      $(this).animate({"top":"5px"}, 150);
+    });
+
     //shuffle
     $('.picThr').click(function(){
       $('.picThr').slideUp("fast");
@@ -54,6 +62,22 @@ $(window).ready(function() {
     $('.picTwo').animate({"margin":"55px 0 0 25%", "z-index":"3"});
     $('.picOne').animate({"margin":"75px 0 0 30%", "z-index":"2"});
 });
+
+/*var element = [];
+
+element[2] = $('.picThr');
+element[1] = $('.picTwo');
+element[0] = $('.picOne');
+element[3] = $('.picMore');
+
+element[2].animate({"margin":"35px 0 0 20%", "z-index":"4"});
+element[1].animate({"margin":"55px 0 0 25%", "z-index":"3"});
+element[0].animate({"margin":"75px 0 0 30%", "z-index":"2"});
+element[3].animate({"margin":"90px 0 0 35%", "z-index":"1"});
+
+$('.picAll').click(function() {
+  element.push();
+});*/
 
 /*if ( $('body').scrollTop() > $('.mainOne').position().top ) {
     $('.const').toggleClass('testOne');
