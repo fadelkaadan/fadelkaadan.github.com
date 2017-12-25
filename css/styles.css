@@ -182,25 +182,29 @@ body {
   color: #ffffff;
   text-decoration: none;
 }
-.pointers {
-  width: 100%;
-  height: 5px;
-  margin: -55px auto;
+.slider-dots {
+  list-style: none;
+  display: block;
+  padding-left: 0;
+  margin-bottom: 0;
 }
-.pointers a {
-  width: 7px;
-  height: 7px;
-  background: #c3c3c3;
-  display: inline-block;
-  margin: 0px 10px 0 10px;
-  border-radius: 5px;
+
+.slider-dots li {
+  color: #adb1b1;
+  display: inline;
+  font-size: 30px;
+  margin-right: 5px;
 }
-.pointers a:hover {
-  background: #ffffff;
+
+.slider-dots li.active-dot {
+  color: #ffffff;
+}
+.active-point {
+  background: #ffffff !important;
   border: 1px solid #ffffff;
   cursor: pointer;
 }
-.slideStory {
+.slideProjects {
   height: 60px;
   width: 60px;
   border-radius: 50%;
@@ -208,8 +212,9 @@ body {
   top: 116px;
   position: relative;
   opacity: 0.3;
+  cursor: pointer;
 }
-a.slideStory:hover {
+span.slideProjects:hover {
     opacity: 0.6;
 }
 
@@ -269,12 +274,27 @@ a.slideStory:hover {
   background: #393939;
   float: right;
   text-align: center;
+  position: relative;
+  overflow: auto;
 }
-.projects a {
+.projects h1 {
   color: #FAFFF7;
-  font-size: 40px;
-  line-height: 3.3;
+  font-size: 50px;
+  margin: 125px 0 30px 0;
   text-decoration: none;
+  text-decoration: none;
+}
+.projects .proOne {
+  display: none;
+}
+.projects .proTwo {
+  display: none;
+}
+.projects .proThr {
+  display: none;
+}
+.active-slide {
+  display: inline-block;
 }
 .footer {
   height: 200px;
@@ -317,7 +337,7 @@ a.slideStory:hover {
 }
 /*story*/
 .story {
-  background: #25758A;
+  background: #227b93;
   width: 100%;
   text-align: center;
   position: relative;
@@ -330,7 +350,10 @@ a.slideStory:hover {
   display: block;
   float: left;
   text-align: center;
-  border-bottom: 0.5px solid #453847;
+  border-bottom: 1px solid #4e4d58;
+}
+.year:hover {
+  background: #2089a4;
 }
 .year a {
     color: #FF6E6E;
@@ -343,7 +366,7 @@ a.slideStory:hover {
     padding: 0px 5%;
 }
 .born {
-  margin-top: 50px;
+  padding-top: 50px;
 }
 .storypic {
   display: inline-block;
@@ -390,7 +413,7 @@ a.slideStory:hover {
   .pics {
     margin: 0 0;
   }
-  .slideStory {
+  .slideProjects {
     display: none;
   }
 }
