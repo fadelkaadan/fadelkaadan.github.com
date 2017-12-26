@@ -3,6 +3,14 @@ body {
     padding: 0;
     font-family: Arial;
     font-weight: 100;
+
+    /* prevent text and image selection highlighting */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .nav {
   width: 20%;
@@ -91,7 +99,7 @@ body {
   display: inline-block;
   width: 70px;
   border-radius: 50%;
-  top: 680px;
+  top: 85%;
   position: relative;
   opacity: 0.7;
   cursor: pointer;
@@ -149,6 +157,11 @@ span.arrowDown:hover {
   height: 140px;
   margin: 20px 0 0 0;
 }
+.picMore {
+  margin: 90px 0 0 35%;
+  z-index: 1;
+  text-align: center;
+}
 .picOne {
   margin: 75px 0 0 30%;
   z-index: 2;
@@ -160,11 +173,6 @@ span.arrowDown:hover {
 .picThr {
   margin: 35px 0 0 20%;
   z-index: 4;
-}
-.picMore {
-  margin: 90px 0 0 35%;
-  z-index: 1;
-  text-align: center;
 }
 .picMore a {
   font-size: 21px;
@@ -200,7 +208,7 @@ span.arrowDown:hover {
 }
 
 .slider-dots li {
-  color: #adb1b1;
+  color: #848686;
   display: inline;
   font-size: 30px;
   margin-right: 5px;
@@ -422,9 +430,6 @@ span.slideProjects:hover { /*-------------------------------*/
   }
   .pics {
     margin: 0 0;
-  }
-  .slideProjects {
-    display: none;
   }
 }
 @media only screen and (max-width: 375px) {

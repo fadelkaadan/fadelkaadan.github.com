@@ -69,24 +69,26 @@
   var arr = [first, second, third, more];
 
   $('.picAll').click(function(){
-      var temp;
-      for (var i = 0; i < arr.length; i++) {
-        if ($(this).is(arr[i])) {
-           temp = arr[i].css('z-index');
-           arr[i].slideUp("fast");
-           arr[i].animate({"margin":"90px 0 0 35%", "z-index":"1"});
-           arr[i].slideDown("fast");
+    for (var i = 0; i < arr.length; i++) {
+      if ($(this).is(arr[i])) {
+         arr[i].slideUp(300);
+          var temp;
+          temp = arr[i];
+          for (var j = 0; j < arr.length - i; j++) {
+            arr[j + i] = arr[j + i + 1]
           }
-      }
-      for (var i = 0; i < arr.length; i++) {
-        if (!($(this).is(arr[i]))) {
-          if (arr[i].css("z-index") < temp) {
-            arr[i].animate({"margin":"-=20px 0 0 -=5%", "z-index":"+=1"});
-          }
+          arr[arr.length - 1] = temp;
+
+          arr[0].animate({"margin":"35px 0 0 20%", "z-index":"4"}, 100);
+          arr[1].animate({"margin":"55px 0 0 25%", "z-index":"3"}, 100);
+          arr[2].animate({"margin":"75px 0 0 30%", "z-index":"2"}, 100);
+          arr[3].animate({"margin":"90px 0 0 35%", "z-index":"1"}, 100);
+
+          arr[i].slideDown(50);
         }
-      }
+    }
   });
 
   //under construction
-  $('.const').delay(1500).fadeOut();
+  $('.const').delay(1000).fadeOut();
 });
