@@ -87,31 +87,41 @@ body {
   text-align: center;
 }
 .arrowDown {
-  top: 90%;
+  height: 50px;
+  display: inline-block;
+  width: 70px;
+  border-radius: 50%;
+  top: 680px;
+  position: relative;
+  opacity: 0.7;
   cursor: pointer;
-  position: absolute;
-  margin: 0 -43px 0 -43px;
+}
+span.arrowDown:hover {
+    opacity: 0.6;
 }
 .look_line {
-  background: white;
-  width: 50px;
-  height: 3px;
-  position: absolute;
-}
+  background-color: rgb(255, 255, 255);
+  height: 45px;
+  width: 4px;
+  top: 15px;
+  display: inline-block;
+  position: relative;
+  }
 .look_right {
-  moz-transform: rotate(140deg);
-  -ms-transform: rotate(140deg);
-  -o-transform: rotate(140deg);
-  -webkit-transform: rotate(140deg);
-  transform: rotate(140deg);
-  margin-left: 37px;
+  moz-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  -o-transform: rotate(60deg);
+  -webkit-transform: rotate(60deg);
+  transform: rotate(60deg);
+  left: 14px;
 }
 .look_left {
-  moz-transform: rotate(40deg);
-  -ms-transform: rotate(40deg);
-  -o-transform: rotate(40deg);
-  -webkit-transform: rotate(40deg);
-  transform: rotate(40deg);
+  moz-transform: rotate(120deg);
+  -ms-transform: rotate(120deg);
+  -o-transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+  transform: rotate(120deg);
+  right: 15px;
 }
 .mainVsco {
   width: 50%;
@@ -204,7 +214,7 @@ body {
   border: 1px solid #ffffff;
   cursor: pointer;
 }
-.slideProjects {
+.slideProjects { /*-------------------------------*/
   height: 60px;
   width: 60px;
   border-radius: 50%;
@@ -214,7 +224,7 @@ body {
   opacity: 0.3;
   cursor: pointer;
 }
-span.slideProjects:hover {
+span.slideProjects:hover { /*-------------------------------*/
     opacity: 0.6;
 }
 
@@ -226,7 +236,7 @@ span.slideProjects:hover {
   float: right;
   left: -5%;
 }
-.slideArrow {
+.slideArrow { /*-------------------------------*/
   background-color: rgb(255, 255, 255);
   height: 25px;
   width: 2px;
@@ -234,7 +244,7 @@ span.slideProjects:hover {
   position: absolute;
   display: inline-block;
 }
-.topLeft {
+.topLeft {  /*-------------------------------*/
   moz-transform: rotate(40deg);
   -ms-transform: rotate(40deg);
   -o-transform: rotate(40deg);
@@ -243,7 +253,7 @@ span.slideProjects:hover {
   top: 8px;
   left: 27px;
 }
-.downLeft {
+.downLeft { /*-------------------------------*/
   moz-transform: rotate(150deg);
   -ms-transform: rotate(150deg);
   -o-transform: rotate(150deg);

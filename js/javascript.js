@@ -20,6 +20,35 @@
     });
 
     //slide projects
+    var dots = [$(".dot1"), $(".dot2"), $(".dot3"), $(".dot4")];
+
+    $('.toLeft').click(function(){
+      for (var i = 0; i < dots.length; i++) {
+        if ($(dots[i]).hasClass("active-dot")) {
+          $(dots[i]).removeClass("active-dot");
+          if (i == 0) {
+              $(dots[dots.length - 1]).addClass("active-dot");
+          } else {
+            $(dots[i - 1]).addClass("active-dot");
+          }
+          break;
+        }
+      }
+    });
+
+    $('.toRight').click(function() {
+      for (var i = 0; i < dots.length; i++) {
+        if ($(dots[i]).hasClass("active-dot")) {
+          $(dots[i]).removeClass("active-dot");
+          if (i == dots.length - 1) {
+              $(dots[0]).addClass("active-dot");
+          } else {
+            $(dots[i + 1]).addClass("active-dot");
+          }
+          break;
+        }
+      }
+    })
 
     //jump
     var supportsTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
@@ -29,7 +58,7 @@
       });
       $('.picAll').mouseleave(function() {
         $(this).animate({"top":"5px"}, 150);
-      });
+      })
     }
 
   //shuffle
@@ -57,7 +86,7 @@
         }
       }
   });
-  
+
   //under construction
   $('.const').delay(1500).fadeOut();
 });
