@@ -1,4 +1,5 @@
 $(window).ready(function() {
+  //minimize button
   $('#min').click(function() {
     for (var i = 0; i < 70; i++) {
       $('.box').animate({
@@ -11,6 +12,7 @@ $(window).ready(function() {
     $('.btns').css({'display':'none'});
   });
 
+  //maximize button
   var isClicked = false;
   $('#max').click(function() {
     if (isClicked == false) {
@@ -32,7 +34,10 @@ $(window).ready(function() {
         }, 10)
       }
     }
+  });
 
-
+  //close button
+  $('#close').click(function() {
+    window.close();
   })
 })
