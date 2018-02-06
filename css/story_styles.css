@@ -1,0 +1,47 @@
+.story {
+  background: #81476c;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  float: left;
+  color: #ffffff;
+  font-size: 1.2em
+}
+.year {
+  width: 100%;
+  display: block;
+  float: left;
+  text-align: center;
+  border-bottom: 1px solid #4e4d58;
+}
+.year:hover {
+  background: #8c4a73;
+}
+.year a {
+    color: #FF6E6E;
+    text-decoration: none;
+}
+.year a:hover {
+    text-decoration: underline;
+}
+.year p {
+    padding: 0px 5%;
+}
+.born {
+  padding-top: 50px;
+}
+.storypic {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.baby {
+  width: 170px;
+  height: 100px;
+  background-image: url('../images/story/baby.png');
+}
+.pupil {
+  width: 170px;
+  height: 160px;
+  background-image: url('../images/story/school.png');
+}
