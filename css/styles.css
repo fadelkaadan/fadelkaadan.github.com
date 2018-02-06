@@ -16,7 +16,7 @@ body {
   width: 20%;
   min-width: 270px;
   height: 100vh;
-  background-color: #333333;
+  background-color: rgb(33, 33, 33);
   position: fixed;
   float: left;
   left: -420px;
@@ -34,7 +34,7 @@ body {
 .line_nav {
   height: 3px;
   width: 100%;
-  background: #333333;
+  background: rgb(207, 205, 208);
   float: left;
   margin-bottom: 8px;
 }
@@ -87,7 +87,7 @@ body {
 .main {
   width: 100%;
   height: 100vh;
-  background-image: url('../images/bg.jpeg');
+  background-image: url('../images/bgtest.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -181,25 +181,37 @@ span.arrowDown:hover {
   line-height: 8.8;
 }
 .storyCard,
-.blogCard {
+.terminalCard {
   width: 50%;
   height: 300px;
-  background: #288198;
+  background: #393939;
   float: left;
-  text-align: center;
   text-decoration: none;
 }
-.storyCard:hover,
-.blogCard:hover {
-  background: #268aa4;
+.storyCard {
+  background-image: url('../images/dalia.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
 }
-.mainStory h1,
-.blog h1 {
+.terminal {
+  padding-left: 7%;
+}
+.mainStory h1 {
+  color: #9e6280;
   font-size: 60px;
   line-height: 3.3;
-  color: #ffffff;
   text-decoration: none;
 }
+.terminal h1 {
+  font-size: 80px;
+  color: #ffffff;
+  line-height: 0;
+  font-family: monospace;
+  text-decoration: none;
+}
+
 .slider-dots {
   list-style: none;
   display: block;
@@ -208,7 +220,7 @@ span.arrowDown:hover {
 }
 
 .slider-dots li {
-  color: #848686;
+  color: #9e627f;
   display: inline;
   font-size: 30px;
   margin-right: 5px;
@@ -229,7 +241,7 @@ span.arrowDown:hover {
   background-color: #393939;
   top: 116px;
   position: relative;
-  opacity: 0.3;
+  opacity: 0.1;
   cursor: pointer;
 }
 span.slideProjects:hover { /*-------------------------------*/
@@ -289,11 +301,14 @@ span.slideProjects:hover { /*-------------------------------*/
 .projects {
   width: 50%;
   height: 300px;
-  background: #393939;
-  float: right;
+  background: #81476c;
+  float: left;
   text-align: center;
   position: relative;
   overflow: auto;
+}
+.projects:hover {
+  background: #8e4a75;
 }
 .projects h1 {
   color: #FAFFF7;
@@ -317,13 +332,13 @@ span.slideProjects:hover { /*-------------------------------*/
 .footer {
   height: 200px;
   width: 100%;
-  background-color: rgb(247, 91, 91);
+  background-color: rgb(53, 125, 168);
   text-align: center;
   float: left;
   text-decoration: none;
 }
 .footer:hover {
-  background-color: rgb(249, 78, 78);
+  background-color: rgb(49, 135, 187);
 }
 .footer h1 {
   font-size: 30pt;
@@ -355,7 +370,7 @@ span.slideProjects:hover { /*-------------------------------*/
 }
 /*story*/
 .story {
-  background: #227b93;
+  background: #81476c;
   width: 100%;
   text-align: center;
   position: relative;
@@ -371,7 +386,7 @@ span.slideProjects:hover { /*-------------------------------*/
   border-bottom: 1px solid #4e4d58;
 }
 .year:hover {
-  background: #2089a4;
+  background: #8c4a73;
 }
 .year a {
     color: #FF6E6E;
@@ -416,7 +431,7 @@ span.slideProjects:hover { /*-------------------------------*/
   .projects {
     width: 100%;
   }
-  .blogCard {
+  .terminalCard {
     width: 100%;
   }
   .pics {

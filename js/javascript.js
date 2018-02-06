@@ -15,7 +15,7 @@
     //arrow down
     $('.arrowDown').click(function(){
       $('html,body').animate({
-     scrollTop: $('.mainVsco').offset().top
+        scrollTop: $('.mainVsco').offset().top
       });
     });
 
@@ -72,8 +72,7 @@
     for (var i = 0; i < arr.length; i++) {
       if ($(this).is(arr[i])) {
          arr[i].slideUp(300);
-          var temp;
-          temp = arr[i];
+          var temp = arr[i];
           for (var j = 0; j < arr.length - i; j++) {
             arr[j + i] = arr[j + i + 1]
           }
@@ -88,6 +87,14 @@
         }
     }
   });
+
+  //flash the dash in the terminal storyCard
+  var i = 0;
+  while(i < 1000) {
+    $('#flash').delay(500).fadeOut();
+    $('#flash').delay(500).fadeIn();
+    i++;
+  }
 
   //under construction
   $('.const').delay(1000).fadeOut();

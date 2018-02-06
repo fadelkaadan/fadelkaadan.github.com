@@ -1,0 +1,83 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #3d83ab;
+}
+.box {
+  margin: 4% 5% 0 5%;
+  width: 90%;
+  height: 85%;
+  padding: 0px;
+  display: block;
+  position: fixed;
+  background-color: #252121;
+  border-radius: 7px;
+}
+
+.terminal {
+  width: 100%;
+  height: 100%;
+  padding: 1% 0 0 1%;
+  background-color: #252121;
+  border-radius: 7px;
+  color: white;
+  border: none;
+  resize: none;
+  font-size: 14px;
+  font-family: monospace;
+  box-sizing: border-box;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+.head {
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  height: 40px;
+  width: 100%;
+  background-color: #eaeaea;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+.btns {
+  padding: 13px 0 0 18px;
+}
+.sign {
+  border-radius: 100%;
+  height: 15px;
+  width: 15px;
+  margin-right: 7px;
+  display: inline-block;
+}
+#close {
+  background-color: #ff3d00db;
+}
+#close:hover {
+  background-color: #d23503db;
+}
+#min {
+  background-color: #ffca00ed;
+}
+#min:hover {
+  background-color: #e0b304ed;
+}
+
+#max {
+  background-color: #00e000c7;
+}
+#max:hover {
+  background-color: #02c402c7;
+}
+.text {
+  padding: 0px 0px 0 2%;
+  font-family: monospace;
+  color: #fff;
+  font-size: 1.1em;
+}
