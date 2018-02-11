@@ -3,6 +3,7 @@ body {
     padding: 0;
     font-family: Arial;
     font-weight: 100;
+    background-color: rgb(33, 33, 33);
     /* prevent text and image selection highlighting */
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -133,7 +134,7 @@ span.arrowDown:hover {
 .mainVsco {
   width: 50%;
   height: 300px;
-  background: #393939;
+  background: #313131;
   display: inline-block;
   float: left;
   position: relative;
@@ -183,7 +184,7 @@ span.arrowDown:hover {
 .terminalCard {
   width: 50%;
   height: 300px;
-  background: #393939;
+  background: #313131;
   float: left;
   text-decoration: none;
 }

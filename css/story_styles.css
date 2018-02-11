@@ -1,3 +1,6 @@
+body {
+  background-color: rgb(33, 33, 33);
+}
 .story {
   background: #81476c;
   width: 100%;
@@ -41,7 +44,13 @@
   background-image: url('../images/story/baby.png');
 }
 .pupil {
-  width: 170px;
-  height: 160px;
+  width: 140px;
+  height: 140px;
   background-image: url('../images/story/school.png');
+}
+
+.machart {
+  width: 140px;
+  height: 100px;
+  background-image: url('../images/story/testbestellung.png');
 }
