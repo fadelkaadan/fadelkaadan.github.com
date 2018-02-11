@@ -1,14 +1,11 @@
 $(window).ready(function() {
+
   //minimize button
   $('#min').click(function() {
-    for (var i = 0; i < 70; i++) {
-      $('.box').animate({
-        'width': '-=2%',
-        'height': '-=2%',
-        'top': '+=1%',
-        'left': '+=1%'
-      }, 5);
-    }
+    $('.box').animate({
+      'width': '0',
+      'height': '0'
+    }, 500);
     $('.btns').css({'display':'none'});
   });
 
@@ -17,23 +14,26 @@ $(window).ready(function() {
   $('#max').click(function() {
     if (isClicked == false) {
       isClicked = true;
-      for (var i = 0; i < 5; i++) {
         $('.box').animate({
-          'width': '+=2%',
-          'height': '+=2%',
-          'margin': '-=1% -=1% 0 -=1%'
-        }, 10)
-      }
+          'width': '100%',
+          'height': '100%',
+        }, 300)
     } else {
       isClicked = false;
-      for (var i = 0; i < 5; i++) {
         $('.box').animate({
-          'width': '-=2%',
-          'height': '-=2%',
-          'margin': '+=1% +=1% 0 +=1%'
-        }, 10)
-      }
+          'width': '90%',
+          'height': '85%',
+        }, 300)
     }
+  });
+
+  //reopen terminal
+  $('.file').click(function() {
+    $('.box').animate({
+      'width': '90%',
+      'height': '85%',
+    }, 500);
+    $('.btns').css({'display':'inline-block'});
   });
 
   //close button
