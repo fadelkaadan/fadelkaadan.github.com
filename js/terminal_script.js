@@ -4,7 +4,12 @@ $(window).ready(function() {
   $('#min').click(function() {
     $('.box').animate({
       'width': '0',
-      'height': '0'
+      'height': '0',
+      'left': '0',
+      'right': '0',
+      'top': '0',
+      'bottom': '0',
+      'margin': 'auto'
     }, 500);
     $('.btns').css({'display':'none'});
   });

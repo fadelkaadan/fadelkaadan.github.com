@@ -8,11 +8,11 @@ body {
   width: 65px;
   position: absolute;
   z-index: 1;
-  left:0;
-  right:0;
-  top:80px;
-  bottom:0;
-  margin:auto;
+  left: 0;
+  right: 0;
+  top: 80px;
+  bottom: 0;
+  margin: auto;
   text-align: center;
 }
 .icon {
@@ -34,11 +34,11 @@ body {
 }
 
 .box {
-  left:0;
-  right:0;
-  top:0;
-  bottom:0;
-  margin:auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
   width: 90%;
   height: 85%;
   padding: 0px;
