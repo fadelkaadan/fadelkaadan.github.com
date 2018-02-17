@@ -116,3 +116,37 @@ textarea:focus, input:focus{
   color: #fff;
   font-size: 1.1em;
 }
+
+
+/*-------- AD --------*/
+.ad {
+  height: 100%;
+  width: 100%;
+  background-color: blue;
+  opacity: 0.95;
+  position: fixed;
+  z-index: 10;
+  color: #b10000;
+  display: none;
+}
+.adMsg {
+  height: 30%;
+  width: 50%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  text-align: center;
+  border: 2px solid #b10000;
+  min-width: 300px;
+  min-height: 270px;
+}
+.closeMsg {
+  font-size: 30px;
+  font-family: sans-serif;
+  float: right;
+  margin: 5%;
+  cursor: pointer;
+}

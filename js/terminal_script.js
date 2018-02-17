@@ -46,3 +46,14 @@ $(window).ready(function() {
     window.close();
   })
 })
+
+
+/*-------- AD --------*/
+var closeAd = document.querySelector('.closeMsg');
+var ad = document.querySelector('.ad');
+ad.style.display = 'block';
+function closeAdFunc() {
+  ad.style.display = 'none';
+}
+
+closeAd.addEventListener('click', closeAdFunc, false);
