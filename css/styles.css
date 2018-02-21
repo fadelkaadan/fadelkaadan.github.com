@@ -40,14 +40,14 @@ body {
   margin-bottom: 8px;
 }
 .navbar-close {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   position: relative;
   display: block;
   left: 25px;
   right: 0px;
   bottom: 0px;
-  top: 20px;
+  top: 25px;
   margin: 0px 0 50px 0;
   float: left;
   text-align: center;
@@ -59,7 +59,7 @@ body {
   height: 100%;
   position: relative;
   display: inline-block;
-  margin: -3px;
+  margin: -4px;
 }
 .line_close_one {
   moz-transform: rotate(135deg);
@@ -176,16 +176,16 @@ span.arrowDown:hover {
   text-align: center;
 }
 .picOne {
-  margin: 75px 0 0 30%;
-  z-index: 2;
+  margin: 35px 0 0 20%;
+  z-index: 4;
 }
 .picTwo {
   margin: 55px 0 0 25%;
   z-index: 3;
 }
 .picThr {
-  margin: 35px 0 0 20%;
-  z-index: 4;
+  margin: 75px 0 0 30%;
+  z-index: 2;
 }
 .picMore a {
   font-size: 21px;
@@ -208,11 +208,6 @@ span.arrowDown:hover {
   background-size: cover;
   background-position: center;
   text-align: center;
-  transform: rotateY(0deg);
-  .storyCard:hover & {
-      transform: rotateX(180deg);
-
-  }
 }
 .terminal {
   padding-left: 7%;

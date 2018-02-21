@@ -45,15 +45,10 @@ $(window).ready(function() {
   $('#close').click(function() {
     window.close();
   })
+
+  //drag
+  var dragFile = document.querySelector('.file');
+  dragFile.addEventListener("drag", function(event) {
+
+  }, false);
 })
-
-
-/*-------- AD --------*/
-var closeAd = document.querySelector('.closeMsg');
-var ad = document.querySelector('.ad');
-ad.style.display = 'block';
-function closeAdFunc() {
-  ad.style.display = 'none';
-}
-
-closeAd.addEventListener('click', closeAdFunc, false);

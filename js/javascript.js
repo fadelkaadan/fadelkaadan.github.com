@@ -1,11 +1,11 @@
-$(window).ready(function() {
-  $('.navbar-close').click(function(){
+$(function() {
+  $('.navbar-close').on('click', function() {
     $('.nav').animate({
       left: "-420"
     });
     $('.overlay').css({'display':'fixed'});
   });
-  $('.navbar-toggler').click(function(){
+  $('.navbar-toggler').on('click', function() {
     $('.nav').animate({
       left: "0"
     });
@@ -13,16 +13,20 @@ $(window).ready(function() {
   });
 
   //arrow down
-  $('.arrowDown').click(function(){
+  $('.arrowDown').on('click', function() {
     $('html,body').animate({
       scrollTop: $('.mainVsco').offset().top
     });
   });
 
   //slide projects
-  var dots = [$(".dot1"), $(".dot2"), $(".dot3"), $(".dot4")];
+  var dotOne = $(".dot1");
+  var dotTwo = $(".dot2");
+  var dotThr = $(".dot3");
+  var dotFour = $(".dot4");
+  var dots = [dotOne, dotTwo, dotThr, dotFour];
 
-  $('.toLeft').click(function(){
+  $('.toLeft').on('click', function(){
     for (var i = 0; i < dots.length; i++) {
       if ($(dots[i]).hasClass("active-dot")) {
         $(dots[i]).removeClass("active-dot");
@@ -36,7 +40,7 @@ $(window).ready(function() {
     }
   });
 
-  $('.toRight').click(function() {
+  $('.toRight').on('click', function() {
     for (var i = 0; i < dots.length; i++) {
       if ($(dots[i]).hasClass("active-dot")) {
         $(dots[i]).removeClass("active-dot");
@@ -62,39 +66,34 @@ $(window).ready(function() {
   }
 
   //shuffle
-  var first = $('.picThr');
+  var first = $('.picOne');
   var second = $('.picTwo');
-  var third = $('.picOne');
+  var third = $('.picThr');
   var more = $('.picMore');
   var arr = [first, second, third, more];
 
-  $('.picAll').click(function(){
+  $('.picAll').on('click', function() {
   for (var i = 0; i < arr.length; i++) {
     if ($(this).is(arr[i])) {
-       arr[i].slideUp(300);
-        var temp = arr[i];
+      arr[i].slideUp(50);
         for (var j = 0; j < arr.length - i; j++) {
           arr[j + i] = arr[j + i + 1]
         }
-        arr[arr.length - 1] = temp;
+        arr[arr.length - 1] = $(this);
 
         arr[0].animate({"margin":"35px 0 0 20%", "z-index":"4"}, 100);
         arr[1].animate({"margin":"55px 0 0 25%", "z-index":"3"}, 100);
         arr[2].animate({"margin":"75px 0 0 30%", "z-index":"2"}, 100);
         arr[3].animate({"margin":"90px 0 0 35%", "z-index":"1"}, 100);
 
-        arr[i].slideDown(50);
+        arr[i].slideDown(200);
       }
   }
   });
 
-  //flash the dash in the terminal storyCard
-  var i = 0;
-  while(i < 1000) {
-    $('#flash').delay(500).fadeOut();
-    $('#flash').delay(500).fadeIn();
-    i++;
-  }
+  //flash the dash in the terminal card
+  for (var i = 0; i < 500; i++)
+    $('#flash').fadeToggle(700);
 
   //under construction
   $('.const').delay(1000).fadeOut();
