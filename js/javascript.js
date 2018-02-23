@@ -1,18 +1,29 @@
 $(function() {
-  $('.navbar-close').on('click', function() {
-    $('.nav').animate({
-      left: "-420"
-    });
-    $('.overlay').css({'display':'fixed'});
-  });
-  $('.navbar-toggler').on('click', function() {
-    $('.nav').animate({
-      left: "0"
-    });
-    $('.overlay').css({'display':'none'});
+  var isClosed = true;
+  var toggler = $('.navbar-toggler');
+  for (var i = 0; i < 2; i++)
+    toggler.fadeToggle(700);
+
+  toggler.on('click', function() {
+    toggler.fadeOut(50);
+    if (isClosed) {
+      isClosed = false;
+      $('.nav').animate({
+        left: "0"
+      }, 400);
+    } else {
+      isClosed = true;
+      $('.nav').animate({
+        left: "-420px"
+      }, 200);
+    }
+    toggler.fadeIn(1000);
   });
 
   //arrow down
+  for (var i = 0; i < 100; i++)
+    $('.arrowDown').fadeToggle(1000);
+
   $('.arrowDown').on('click', function() {
     $('html,body').animate({
       scrollTop: $('.mainVsco').offset().top
@@ -55,15 +66,12 @@ $(function() {
   })
 
   //jump
-  var supportsTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
-  if (supportsTouch = true) {
-    $('.picAll').mouseenter(function() {
-      $(this).animate({"top":"-5px"}, 150);
-    });
-    $('.picAll').mouseleave(function() {
-      $(this).animate({"top":"5px"}, 150);
-    })
-  }
+  $('.picAll').mouseenter(function() {
+    $(this).animate({"top":"-5px"}, 150);
+  });
+  $('.picAll').mouseleave(function() {
+    $(this).animate({"top":"5px"}, 50);
+  })
 
   //shuffle
   var first = $('.picOne');
