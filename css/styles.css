@@ -122,6 +122,7 @@ span.arrowDown:hover {
   display: inline;
   box-shadow: 5px 5px 30px #212121;
   overflow: hidden;
+  cursor: pointer;
 }
 .picAll img {
   width: 180px;
@@ -159,6 +160,7 @@ span.arrowDown:hover {
   background: #313131;
   float: left;
   text-decoration: none;
+  cursor: pointer;
 }
 .storyCard {
   background-image: url('../images/dalia.jpeg');
