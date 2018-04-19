@@ -14,15 +14,14 @@ $(function() {
     } else {
       isClosed = true;
       $('.nav').animate({
-        left: "-420px"
+        left: "-100%"
       }, 200);
     }
     toggler.fadeIn(1000);
   });
 
   //arrow down
-  for (var i = 0; i < 100; i++)
-    $('.arrowDown').fadeToggle(1000);
+  setInterval(() => $('.arrowDown').fadeToggle(1000), 1000);
 
   $('.arrowDown').on('click', function() {
     $('html,body').animate({
@@ -31,37 +30,65 @@ $(function() {
   });
 
   //slide projects
-  var dotOne = $(".dot1");
-  var dotTwo = $(".dot2");
-  var dotThr = $(".dot3");
-  var dotFour = $(".dot4");
-  var dots = [dotOne, dotTwo, dotThr, dotFour];
+
+  var $slider = $('.skills');
+  var $group = $('.slide__group');
+  var $slides = $('.slide')
+  var buttonArray = [];
+  var currentIndex = 0;
+
+  $.each($slides, function(index) {
+    var $button = $('<button type="button" class="slide__btn">&bull;</button>');
+    if (index === currentIndex) {
+      $button.addClass('slide__btn--active');
+    }
+    $button.on('click', function() {
+      move(index);
+    }).appendTo('.slide__btns');
+    buttonArray.push($button);
+  })
+
+  function move(newIndex) {
+    if (newIndex === currentIndex) {
+      return;
+    }
+    var animateLeft, slideLeft;
+
+    buttonArray[currentIndex].removeClass('slide__btn--active');
+    buttonArray[newIndex].addClass('slide__btn--active');
+
+    if (newIndex > currentIndex) {
+      slideLeft = '100%';
+      animateLeft = '-100%';
+    } else {
+      slideLeft = '-100%';
+      animateLeft = '100%';
+    }
+
+    $slides.eq(newIndex).css({ left: slideLeft, display: 'block' });
+    $group.animate({ left: animateLeft }, 100, function() {
+      $slides.eq(currentIndex).css({ display: 'none' });
+      $slides.eq(newIndex).css({ left: 0 })
+      $group.css({ left: 0 });
+      currentIndex = newIndex;
+    });
+  }
+
+  var $slideBtns = $('.slide__btn');
 
   $('.toLeft').on('click', function(){
-    for (var i = 0; i < dots.length; i++) {
-      if ($(dots[i]).hasClass("active-dot")) {
-        $(dots[i]).removeClass("active-dot");
-        if (i == 0) {
-            $(dots[dots.length - 1]).addClass("active-dot");
-        } else {
-          $(dots[i - 1]).addClass("active-dot");
-        }
-        break;
-      }
+    if (currentIndex == 0) {
+      move($slideBtns.length - 1);
+    } else {
+      move(currentIndex - 1);
     }
-  });
+  })
 
   $('.toRight').on('click', function() {
-    for (var i = 0; i < dots.length; i++) {
-      if ($(dots[i]).hasClass("active-dot")) {
-        $(dots[i]).removeClass("active-dot");
-        if (i == dots.length - 1) {
-            $(dots[0]).addClass("active-dot");
-        } else {
-          $(dots[i + 1]).addClass("active-dot");
-        }
-        break;
-      }
+    if (currentIndex == $slideBtns.length - 1) {
+      move(0);
+    } else {
+      move(currentIndex + 1);
     }
   })
 
@@ -81,9 +108,12 @@ $(function() {
   var arr = [first, second, third, more];
 
   $('.picAll').on('click', function() {
-  for (var i = 0; i < arr.length; i++) {
-    if ($(this).is(arr[i])) {
-      arr[i].slideUp(50);
+    if ($('.picAll').is(':animated')) {
+      return;
+    }
+    for (var i = 0; i < arr.length; i++) {
+      if ($(this).is(arr[i])) {
+        arr[i].slideUp(50);
         for (var j = 0; j < arr.length - i; j++) {
           arr[j + i] = arr[j + i + 1]
         }
@@ -96,13 +126,12 @@ $(function() {
 
         arr[i].slideDown(200);
       }
-  }
+    }
   });
 
   //flash the dash in the terminal card
-  for (var i = 0; i < 500; i++)
-    $('#flash').fadeToggle(700);
+  setInterval(() => $('#flash').fadeToggle(700), 500);
 
   //under construction
-  $('.const').delay(1000).fadeOut();
+  $('.const').delay(3000).fadeOut();
 });

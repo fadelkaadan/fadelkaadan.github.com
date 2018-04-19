@@ -19,7 +19,7 @@ body {
   height: 100%;
   background-color: rgb(33, 33, 33);
   position: fixed;
-  left: -420px;
+  left: -100%;
   z-index: 10;
 }
 .navbar-toggler {
@@ -185,26 +185,40 @@ span.arrowDown:hover {
   font-family: monospace;
   text-decoration: none;
 }
-/*-------------- PROJECTS SECTION --------------*/
-.slider-dots {
-  list-style: none;
-  display: block;
-  padding-left: 0;
-  margin-bottom: 0;
+/*-------------- SKILLS SECTION --------------*/
+
+.skills {
+  width: 50%;
+  height: 300px;
+  background: #81476c;
+  float: left;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
-.slider-dots li {
+.skills:hover {
+  background: #8e4a75;
+}
+
+.slide__btns {
+  top: 80%;
+  width: 100%;
+  position: absolute;
+}
+.slide__btn {
   color: #9e627f;
   display: inline;
   font-size: 30px;
   margin-right: 5px;
-}
-.slider-dots li.active-dot {
-  color: #ffffff;
-}
-.active-point {
-  background: #ffffff !important;
-  border: 1px solid #ffffff;
+  background: none;
   cursor: pointer;
+  border: none;
+}
+.slide__btn:focus {
+  outline: none;
+}
+.slide__btn--active {
+  color: #ffffff;
 }
 .slideProjects {
   height: 60px;
@@ -215,6 +229,7 @@ span.arrowDown:hover {
   position: relative;
   opacity: 0.1;
   cursor: pointer;
+  z-index: 9;
 }
 span.slideProjects:hover {
     opacity: 0.6;
@@ -269,37 +284,26 @@ span.slideProjects:hover {
   -webkit-transform: rotate(40deg);
   transform: rotate(40deg);
 }
-.projects {
-  width: 50%;
-  height: 300px;
-  background: #81476c;
-  float: left;
-  text-align: center;
+.slide--group {
+  width: 100%;
+  height: 100%;
   position: relative;
-  overflow: auto;
 }
-.projects:hover {
-  background: #8e4a75;
-}
-.projects h1 {
-  color: #FAFFF7;
-  font-size: 50px;
-  margin: 125px 0 30px 0;
-  text-decoration: none;
-  text-decoration: none;
-}
-.projects .proOne {
+.slide {
+  width: 100%;
+  height: 100%;
   display: none;
+  position: absolute;
 }
-.projects .proTwo {
-  display: none;
+.slide:first-child {
+  display: block;
 }
-.projects .proThr {
-  display: none;
+.slide h1 {
+  color: #fff;
+  font-size: 60px;
+  line-height: 3.3;
 }
-.active-slide {
-  display: inline-block;
-}
+
 /*-------------- FOOTER --------------*/
 .footer {
   height: 200px;
@@ -330,13 +334,13 @@ span.slideProjects:hover {
 /*-------------- UNDER CONSTRUCTION WARNING --------------*/
 .const {
   width: 100%;
-  height: 50px;
+  height: 100px;
   background: #2c3d3a;
   position: fixed;
-  opacity: 0.3;
+  opacity: 0.5;
   top: 200px;
   color: #BDFFA3;
-  font-size: 1em;
+  font-size: 2em;
   text-align: center;
   line-height: 3;
   z-index: 9;
@@ -352,7 +356,7 @@ span.slideProjects:hover {
   .mainVsco {
     width: 100%;
   }
-  .projects {
+  .skills {
     width: 100%;
   }
   .terminalCard {
