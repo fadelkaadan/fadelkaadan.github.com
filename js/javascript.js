@@ -108,9 +108,9 @@ $(function() {
   var arr = [first, second, third, more];
 
   $('.picAll').on('click touch', function() {
-    // if ($('.picAll').is(':animated')) {
-    //   return;
-    // }
+    if ($('.picAll').is(':animated')) {
+      return;
+    }
     for (var i = 0; i < arr.length; i++) {
       if ($(this).is(arr[i])) {
         arr[i].slideUp(50);
