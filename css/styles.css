@@ -209,6 +209,7 @@ span.arrowDown:hover {
   color: #9e627f;
   display: inline;
   font-size: 30px;
+  margin: -1px;
   background: none;
   cursor: pointer;
   border: none;
@@ -301,9 +302,6 @@ span.slideProjects:hover {
   color: #fff;
   font-size: 60px;
   line-height: 3.3;
-}
-.slide .exception {
-  line-height: 1.5;
 }
 /*-------------- FOOTER --------------*/
 .footer {

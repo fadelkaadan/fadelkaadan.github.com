@@ -93,12 +93,15 @@ $(function() {
   })
 
   //jump
-  $('.picAll').mouseenter(function() {
-    $(this).animate({"top":"-5px"}, 150);
-  });
-  $('.picAll').mouseleave(function() {
-    $(this).animate({"top":"5px"}, 50);
-  })
+  var hasTouch = ("ontouchstart" in document.documentElement);
+  if (!hasTouch) {
+    $('.picAll').mouseenter(function() {
+      $(this).animate({"top":"-5px"}, 150);
+    });
+    $('.picAll').mouseleave(function() {
+      $(this).animate({"top":"5px"}, 50);
+    })
+  }
 
   //shuffle
   var first = $('.picOne');
