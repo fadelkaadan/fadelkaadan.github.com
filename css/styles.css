@@ -213,6 +213,7 @@ span.arrowDown:hover {
   background: none;
   cursor: pointer;
   border: none;
+  -webkit-appearance: none;
 }
 .slide__btn:focus {
   outline: none;

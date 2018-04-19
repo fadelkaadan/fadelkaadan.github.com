@@ -49,7 +49,7 @@ $(function() {
   })
 
   function move(newIndex) {
-    if (newIndex === currentIndex) {
+    if ($group.is(':animated') || newIndex === currentIndex) {
       return;
     }
     var animateLeft, slideLeft;
