@@ -4,7 +4,7 @@ $(function() {
   for (var i = 0; i < 2; i++)
     toggler.fadeToggle(700);
 
-  toggler.on('click', function() {
+  toggler.on('click touch', function() {
     toggler.fadeOut(50);
     if (isClosed) {
       isClosed = false;
@@ -23,7 +23,7 @@ $(function() {
   //arrow down
   setInterval(() => $('.arrowDown').fadeToggle(1000), 1000);
 
-  $('.arrowDown').on('click', function() {
+  $('.arrowDown').on('click touch', function() {
     $('html,body').animate({
       scrollTop: $('.mainVsco').offset().top
     });
@@ -42,7 +42,7 @@ $(function() {
     if (index === currentIndex) {
       $button.addClass('slide__btn--active');
     }
-    $button.on('click', function() {
+    $button.on('click touch', function() {
       move(index);
     }).appendTo('.slide__btns');
     buttonArray.push($button);
@@ -76,7 +76,7 @@ $(function() {
 
   var $slideBtns = $('.slide__btn');
 
-  $('.toLeft').on('click', function(){
+  $('.toLeft').on('click touch', function(){
     if (currentIndex == 0) {
       move($slideBtns.length - 1);
     } else {
@@ -84,7 +84,7 @@ $(function() {
     }
   })
 
-  $('.toRight').on('click', function() {
+  $('.toRight').on('click touch', function() {
     if (currentIndex == $slideBtns.length - 1) {
       move(0);
     } else {
@@ -107,10 +107,10 @@ $(function() {
   var more = $('.picMore');
   var arr = [first, second, third, more];
 
-  $('.picAll').on('click', function() {
-    if ($('.picAll').is(':animated')) {
-      return;
-    }
+  $('.picAll').on('click touch', function() {
+    // if ($('.picAll').is(':animated')) {
+    //   return;
+    // }
     for (var i = 0; i < arr.length; i++) {
       if ($(this).is(arr[i])) {
         arr[i].slideUp(50);
