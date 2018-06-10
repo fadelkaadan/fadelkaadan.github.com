@@ -37,9 +37,11 @@ body {
 .falcon__logo:hover {
   box-shadow: 0px 100px 100px 5px #2296f3;
 }
-.btn:focus + .falcon__logo,
-.btn:active + .falcon__logo,
-.btn:visited + .falcon__logo {
+/* .btn:focus + .falcon__logo,
+.btn:active + .falcon__logo {
+  animation: launch 2s ease-out forwards;
+} */
+.animate {
   animation: launch 2s ease-out forwards;
 }
 .header-primary {
