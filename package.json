@@ -18,6 +18,5 @@
   "homepage": "https://fadelkaadan.github.io",
   "devDependencies": {
     "node-sass": "^4.9.0"
-  },
-  "dependencies": {}
+  }
 }
