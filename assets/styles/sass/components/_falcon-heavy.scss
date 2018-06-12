@@ -1,0 +1,18 @@
+.falcon__logo {
+    width: 22px;
+    height: 123px;
+    background-image: url(../../images/falcon-heavy.png);
+    background-size: cover;
+    position: absolute;
+    left: 50%;
+    top: -70%;
+    transform: translate(-50%, -70%);
+    transition: all 1s;
+    box-shadow: 0px 70px 70px -5px transparent;
+}
+.falcon__logo:hover {
+    box-shadow: 0px 100px 100px 5px #2296f3;
+}
+.animate {
+    animation: launch 2s ease-out forwards;
+}
