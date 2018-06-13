@@ -12,10 +12,12 @@
     transition: all .5s;
     overflow: hidden;
 
-    &:hover {
+    &:hover,
+    &:focus {
         height: 50vw;
     }
-    &:hover > &__list {
+    &:hover > &__list,
+    &:focus > &__list {
         opacity: 1;
     }
     &__list {
@@ -29,13 +31,6 @@
         & a {
             text-decoration: none;
             color: inherit;
-
-            &:hover {
-                // background-image: linear-gradient(to right, #223347, #071627);
-                // background-clip: text;
-                // color: transparent;
-                // -webkit-background-clip: text;
-            }
         }
     }
 }
