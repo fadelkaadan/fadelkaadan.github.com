@@ -25,6 +25,7 @@
     }
     &__list {
         @include absCenter;
+        width: 100%;
         list-style: none;
         font-size: calc(112.5% + 1vw);
         line-height: calc(112.5% + 2.5vw);
