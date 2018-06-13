@@ -1,8 +1,6 @@
 let btn = document.querySelector('.btn');
 let falcon = document.querySelector('.falcon__logo');
 let deck = document.querySelectorAll('.deck__card');
-let card3 = document.querySelectorAll('.deck__card-3');
-var cardAfter = document.createElement('style');
 
 btn.addEventListener('click', (event) => {
     event.preventDefault;
