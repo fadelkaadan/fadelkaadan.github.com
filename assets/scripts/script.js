@@ -2,14 +2,8 @@ let btn = document.querySelector('.btn');
 let falcon = document.querySelector('.falcon__logo');
 let deck = document.querySelectorAll('.deck__card');
 
-btn.addEventListener('click', (event) => {
-    event.preventDefault;
-    falcon.classList.add('animate');
-})
-btn.addEventListener('touchstart', (event) => {
-    event.preventDefault;
-    falcon.classList.add('animate');
-})
+btn.addEventListener('click', animate)
+btn.addEventListener('touchend', animate);
 
 deck.forEach(function(card) {
     card.addEventListener('click', () => {
@@ -25,4 +19,17 @@ function isAnimated(item) {
         return true;
     }
     return false;
+}
+function animate() {
+    if (!falcon.classList.contains('launch')) {
+        btn.textContent = 'Of course i still love you';
+        if (falcon.classList.contains('land')) {
+            falcon.classList.remove('land');
+        }
+        falcon.classList.add('launch');
+    } else {
+        btn.textContent = 'Launch';
+        falcon.classList.remove('launch');
+        falcon.classList.add('land');
+    }
 }
