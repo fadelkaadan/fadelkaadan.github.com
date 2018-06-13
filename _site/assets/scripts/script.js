@@ -21,7 +21,7 @@ function isAnimated(item) {
 }
 function animate() {
     if (!falcon.classList.contains('launch')) {
-        btn.textContent = 'Of course i still love you';
+        btn.textContent = 'Land';
         if (falcon.classList.contains('land')) {
             falcon.classList.remove('land');
         }

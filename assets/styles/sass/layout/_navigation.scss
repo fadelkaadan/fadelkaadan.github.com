@@ -1,7 +1,9 @@
 .navigation {
     width: 50%;
+    max-width: 500px;
+    position: relative;
     height: 5vh;
-    background-image: linear-gradient(to bottom, #223347 5vh, #071627);
+    background-color: rgba(34, 150, 243, 0.75);
     position: fixed;
     left: 50%;
     z-index: 100;
@@ -11,35 +13,33 @@
     text-align: center;
     transition: all .5s;
     overflow: hidden;
-    cursor: pointer;
 
     &:hover,
     &:focus {
-        height: 50vw;
+        height: 30vh;
+        background-color: $color-blue;
     }
     &:hover > &__list,
     &:focus > &__list {
         opacity: 1;
     }
     &__list {
+        @include absCenter;
         list-style: none;
-        font-size: 10vw;
-        line-height: 15vw;
+        font-size: calc(112.5% + 1vw);
+        line-height: calc(112.5% + 2.5vw);
         opacity: 0;
-        transition: all 1s;
+        transition: all .3s;
         text-transform: uppercase;
-        pointer-events: none;
 
-        & a {
+        & li a {
             text-decoration: none;
             color: inherit;
-        }
-    }
+            transition: all .3s;
 
-    &__close a {
-        text-decoration: none;
-        color: inherit;
-        font-size: inherit;
-        font-size: 3vw;
+            &:hover {
+                font-size: calc(112.5% + 1.1vw);
+            }
+        }
     }
 }
