@@ -2,8 +2,7 @@ let btn = document.querySelector('.btn');
 let falcon = document.querySelector('.falcon__logo');
 let deck = document.querySelectorAll('.deck__card');
 
-btn.addEventListener('click', animate)
-btn.addEventListener('touchend', animate);
+btn.addEventListener('click', animate);
 
 deck.forEach(function(card) {
     card.addEventListener('click', () => {
