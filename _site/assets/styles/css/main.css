@@ -199,6 +199,7 @@ body {
     .navigation__list li a {
       text-decoration: none;
       color: inherit;
+      display: block;
       transition: all .3s; }
       .navigation__list li a:hover {
         font-size: calc(112.5% + 1.1vw); }

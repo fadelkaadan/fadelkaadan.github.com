@@ -1,0 +1,28 @@
+.footer {
+    // height: 30vh;
+    width: 100%;
+    background: $color-blue;
+    text-align: center;
+    padding: 20px 0;
+    font-size: calc(112.5% + 5vw);
+    transition: all .3s;
+    position: relative;
+    height: 25vh;
+
+    &__links {
+        @include absCenter;
+
+        & a {
+            text-decoration: none;
+            color: $color-white;
+            
+            & i {
+                transition: all 1s;
+                margin: 0 20px;
+            }
+            & i:hover {
+                transform: rotate(360deg) scale(1.5);
+            }
+        }
+    }
+}
