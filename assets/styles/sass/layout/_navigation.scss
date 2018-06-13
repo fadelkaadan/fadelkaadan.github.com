@@ -36,6 +36,7 @@
         & li a {
             text-decoration: none;
             color: inherit;
+            display: block;
             transition: all .3s;
 
             &:hover {
