@@ -166,7 +166,6 @@ body {
 .navigation {
   width: 50%;
   max-width: 500px;
-  position: relative;
   height: 5vh;
   background-color: rgba(34, 150, 243, 0.75);
   position: fixed;
@@ -178,12 +177,6 @@ body {
   text-align: center;
   transition: all .5s;
   overflow: hidden; }
-  .navigation:hover, .navigation:focus {
-    height: 30vh;
-    background-color: #2196F3; }
-  .navigation:hover > .navigation__list,
-  .navigation:focus > .navigation__list {
-    opacity: 1; }
   .navigation__list {
     position: absolute;
     top: 50%;
@@ -193,16 +186,27 @@ body {
     list-style: none;
     font-size: calc(112.5% + 1vw);
     line-height: calc(112.5% + 2.5vw);
-    opacity: 0;
+    display: none;
     transition: all .3s;
     text-transform: uppercase; }
     .navigation__list li a {
       text-decoration: none;
       color: inherit;
-      display: block;
       transition: all .3s; }
       .navigation__list li a:hover {
         font-size: calc(112.5% + 1.1vw); }
+
+.navigation--checkbox {
+  opacity: 0;
+  position: fixed; }
+  .navigation--checkbox:focus + .navigation,
+  .navigation--checkbox:hover + .navigation {
+    height: 30vh;
+    background-color: #2196F3;
+    outline: none; }
+  .navigation--checkbox:focus + .navigation > .navigation__list,
+  .navigation--checkbox:hover + .navigation > .navigation__list {
+    display: block; }
 
 .footer {
   width: 100%;

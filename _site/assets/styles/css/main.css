@@ -204,9 +204,31 @@ body {
       .navigation__list li a:hover {
         font-size: calc(112.5% + 1.1vw); }
 
+.footer {
+  width: 100%;
+  background: #2196F3;
+  text-align: center;
+  padding: 20px 0;
+  font-size: calc(112.5% + 5vw);
+  transition: all .3s;
+  position: relative;
+  height: 25vh; }
+  .footer__links {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .footer__links a {
+      text-decoration: none;
+      color: #fff; }
+      .footer__links a i {
+        transition: all 1s;
+        margin: 0 20px; }
+      .footer__links a i:hover {
+        transform: rotate(360deg) scale(1.5); }
+
 .skills-section {
   width: 100%;
-  height: 1000px;
   background-color: #f0f0f0;
   padding: 50px 20px;
   position: relative; }
