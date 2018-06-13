@@ -159,9 +159,10 @@ body {
   text-align: center;
   transition: all .5s;
   overflow: hidden; }
-  .navigation:hover {
+  .navigation:hover, .navigation:focus {
     height: 50vw; }
-  .navigation:hover > .navigation__list {
+  .navigation:hover > .navigation__list,
+  .navigation:focus > .navigation__list {
     opacity: 1; }
   .navigation__list {
     list-style: none;

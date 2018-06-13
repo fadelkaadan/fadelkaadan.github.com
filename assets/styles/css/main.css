@@ -158,7 +158,8 @@ body {
   border-bottom-left-radius: 30px;
   text-align: center;
   transition: all .5s;
-  overflow: hidden; }
+  overflow: hidden;
+  cursor: pointer; }
   .navigation:hover, .navigation:focus {
     height: 50vw; }
   .navigation:hover > .navigation__list,
@@ -170,10 +171,16 @@ body {
     line-height: 15vw;
     opacity: 0;
     transition: all 1s;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    pointer-events: none; }
     .navigation__list a {
       text-decoration: none;
       color: inherit; }
+  .navigation__close a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+    font-size: 3vw; }
 
 .skills-section {
   width: 100%;
