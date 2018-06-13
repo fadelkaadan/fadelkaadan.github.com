@@ -1,0 +1,59 @@
+.deck {
+    padding: 100px 50px;
+
+
+    &:hover > &__card-3::after {
+        opacity: 0;
+    }
+
+    &__card {
+        width: 300px;
+        height: 500px;
+        background-color: #fff;
+        display: inline-block;
+        border-radius: 3px;
+        backface-visibility: hidden;
+        transform: skew(0deg, -18deg);
+        margin-right: -220px;
+        box-shadow: 5px 15px 50px -5px #4b4b4b;
+        transition: all .5s;
+        cursor: pointer;
+    
+        &__text {
+            @include absCenter;
+            font-size: 70px;
+        }
+        &--animated {
+            transform: skew(0, 0) translate(45vw, -10px) scale(1.1);
+            box-shadow: 0 30px 100px 0px #4b4b4b;
+        }
+
+        &-1 {
+            background-image: url(./../../images/cards/card-11.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        &-2 {
+            background-image: url(./../../images/cards/card-22.jpg);
+            background-size: cover;
+        }
+        &-3 {
+            background-image: url(./../../images/cards/card-33.jpg);
+            background-size: cover;
+            
+            &::after {
+                content: "";
+                width: 300px;
+                height: 500px;
+                display: inline-block;
+                border: 2px dashed $color-gray-dark-3;
+                border-radius: 3px;
+                backface-visibility: hidden;
+                transform: skew(0deg, 18deg) translate(45vw, -10px) scale(1.1);
+                margin-right: -220px;
+                transition: all .5s;
+                pointer-events: none;
+            }
+        }
+    }
+}

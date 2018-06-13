@@ -1,0 +1,41 @@
+.navigation {
+    width: 50%;
+    height: 5vh;
+    background-image: linear-gradient(to bottom, #223347 5vh, #071627);
+    position: fixed;
+    left: 50%;
+    z-index: 100;
+    transform: translateX(-50%);
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    text-align: center;
+    transition: all .5s;
+    overflow: hidden;
+
+    &:hover {
+        height: 50vw;
+    }
+    &:hover > &__list {
+        opacity: 1;
+    }
+    &__list {
+        list-style: none;
+        font-size: 10vw;
+        line-height: 15vw;
+        opacity: 0;
+        transition: all 1s;
+        text-transform: uppercase;
+
+        & a {
+            text-decoration: none;
+            color: inherit;
+
+            &:hover {
+                // background-image: linear-gradient(to right, #223347, #071627);
+                // background-clip: text;
+                // color: transparent;
+                // -webkit-background-clip: text;
+            }
+        }
+    }
+}
