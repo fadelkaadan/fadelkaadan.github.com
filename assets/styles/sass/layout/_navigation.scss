@@ -1,7 +1,6 @@
 .navigation {
     width: 50%;
     max-width: 500px;
-    // position: relative;
     height: 5vh;
     background-color: rgba(34, 150, 243, 0.75);
     position: fixed;
@@ -13,7 +12,6 @@
     text-align: center;
     transition: all .5s;
     overflow: hidden;
-    // border: none;
 
     &__list {
         @include absCenter;

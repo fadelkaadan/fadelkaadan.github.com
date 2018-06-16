@@ -1,7 +1,6 @@
-let btn = document.querySelector('.btn');
-let falcon = document.querySelector('.falcon__logo');
+let btn = document.querySelector('.falcon--btn');
+let falcon = document.querySelector('.fa-rocket');
 let deck = document.querySelectorAll('.deck__card');
-
 btn.addEventListener('click', animate);
 
 deck.forEach(function(card) {
@@ -21,13 +20,11 @@ function isAnimated(item) {
 }
 function animate() {
     if (!falcon.classList.contains('launch')) {
-        btn.textContent = 'Land';
         if (falcon.classList.contains('land')) {
             falcon.classList.remove('land');
         }
         falcon.classList.add('launch');
     } else {
-        btn.textContent = 'Launch';
         falcon.classList.remove('launch');
         falcon.classList.add('land');
     }

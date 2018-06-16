@@ -1,0 +1,48 @@
+.falcon--control-panel {
+    position: relative;
+    height: 50vh;
+}
+.falcon--btn {
+    @include absCenter;
+    max-width: 280px;
+    max-height: 280px;
+    width: 35vw;
+    height: 35vw;
+    border-radius: 50%;
+    border: none;
+    font-size: calc(112.5% + 10vw);
+    background-color: #fb3838;
+    color: #333333;
+    box-shadow: 0 10px 80px 0px #6f6f6f;
+    transition: all .3s;
+
+    &:active {
+        box-shadow: 0 10px 80px -5px #6f6f6f;
+    }
+    &:focus {
+        outline: none;
+    }
+    &:hover > i {
+        transform: rotate(-45deg);
+        text-shadow: -75px 75px 70px #ffdcdcb5, 0px 0px #ffffff;
+    }
+    & i {
+        transition: transform .5s, text-shadow 2s;
+    }
+}
+.falcon--description {
+    position: relative;
+    height: 50vh;
+
+    &__text {
+        @include absCenter;
+        color: $color-gray-dark-3;
+        font-size: 3vw;
+    }
+}
+.launch {
+    animation: launch 2s ease-out forwards;
+}
+.land {
+    animation: land 2s ease-out forwards;
+}

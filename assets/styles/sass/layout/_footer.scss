@@ -11,16 +11,17 @@
     &__links {
         @include absCenter;
         width: 100%;
-        
+
         & a {
             text-decoration: none;
             color: $color-white;
             
             & i {
-                transition: all 1s;
+                transition: all .5s;
                 margin: 0 20px;
             }
-            & i:hover {
+            & i:hover,
+            & i:focus {
                 transform: rotate(360deg) scale(1.5);
             }
         }

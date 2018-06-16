@@ -1,0 +1,66 @@
+.book {
+    height: 400px;
+    width: 250px;
+    position: relative;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    display: inline-block;
+    margin: 0 50px;
+
+    &__side {
+        height: 400px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 15px 40px rgba($color-gray-dark-3, .15);
+        transition: all .8s ease;
+        
+        &--front {
+            background-size: cover;
+            background-position: center;
+
+            &-1 {
+                background-image: url(../../images/books/book-1.png);
+            }
+            &-2 {
+                background-image: url(../../images/books/book-2.jpg);
+            }
+            &-3 {
+                background-image: url(../../images/books/book-3.jpg);
+            }
+        }
+        &--back {
+            padding: 20px;
+            text-align: center;
+            transform: rotateY(180deg);
+    
+            & h3 {
+                margin: 30px 0;
+            }
+
+            &-1 {
+                background-image: url(../../images/books/book-1.png);
+                background: #ffdf8f;
+            }
+            &-2 {
+                background-image: url(../../images/books/book-2.jpg);
+                background: #8cbae0;
+            }
+            &-3 {
+                background-image: url(../../images/books/book-3.jpg);
+                background: #dc4954;
+            }
+        }
+    }
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+    
+}
