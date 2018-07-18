@@ -1,0 +1,32 @@
+{
+  "name": "fadelkaadan",
+  "version": "2.0.0",
+  "description": "My personal website",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass assets/styles/sass/main.scss assets/styles/css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass assets/styles/sass/main.scss assets/styles/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' assets/styles/css/style.comp.css -o assets/styles/css/style.prefix.css",
+    "compress:css": "node-sass assets/styles/css/style.prefix.css assets/styles/css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fadelkaadan/fadelkaadan.github.io.git"
+  },
+  "author": "Fadel Kaadan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fadelkaadan/fadelkaadan.github.io/issues"
+  },
+  "homepage": "https://fadelkaadan.github.io",
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "concat": "^1.0.3",
+    "node-sass": "^4.9.0",
+    "npm-run-all": "^4.1.1",
+    "postcss-cli": "^4.1.1"
+  }
+}
